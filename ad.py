@@ -3,6 +3,7 @@ from machine import PWM, Pin
 from time import sleep
 import math
 led = Pin(25, Pin.OUT)
+print(by-airpioa)
 led.toggle
 l = 5
 m = 5

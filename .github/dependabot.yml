@@ -9,3 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule: 10:00am 
       interval: "weekly"
+      - name: Setup Java JDK
+  uses: actions/setup-java@v1.4.4
+

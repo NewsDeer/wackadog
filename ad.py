@@ -45,7 +45,8 @@ def home ():
     shoulder.duty_u16(1500)
     sleep(1)
     shoulder.duty_u16(5500)
-    #leg1(1,1)
+    #leg1(1,1
+#home homes the bot    
 home ()
 
 for i in range (1,9):

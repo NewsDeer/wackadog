@@ -2,6 +2,7 @@ import machine
 from machine import PWM, Pin
 from time import sleep
 import math
+import sys
 led = Pin(25, Pin.OUT)
 print ("by-airpioa")
 print ("find me at https://github.com/airpioa/wackadog")
@@ -14,7 +15,7 @@ shoulder.duty_u16(1500)
 sleep(.01)
 shoulder.duty_u16(5500)
 
-def leg1 (x,y):
+def leg1 (x,y,i):
 # a = math.pi / 6
 #print (math.cos(a))
     q2 = math.acos((x^2 + y^2 - l^2 - m^2)/ (2 * l * m ))
@@ -38,27 +39,13 @@ def leg1 (x,y):
 led.toggle
 def home ():
     
-    leg1(1,1)
+    leg1(1,1,1)
 home ()
 
-for i in range (1,9):
-    #for j = in range (1,9):
-        leg1 (i , i )
-        sleep (0.01)
-        home ()
-        sleep (1)
-        shoulder = PWM(Pin(15))              
-        shoulder.freq(50)
-        shoulder.duty_u16(2500)
-        sleep(.01)
-        shoulder.duty_u16(5100)
-        shoulder = PWM(Pin(14))              
-        shoulder.freq(50)
-        shoulder.duty_u16(2000)
-        sleep(1)
-        shoulder.duty_u16(5600)
-        sleep (0.1)
-        
+def stop ():
+ machine.soft_reset()
 
+
+        
 
 

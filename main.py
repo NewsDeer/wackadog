@@ -15,7 +15,7 @@ shoulder.duty_u16(1500)
 sleep(.01)
 shoulder.duty_u16(5500)
 
-def leg1 (x,y,i):
+def leg1 (x,y,x):
 # a = math.pi / 6
 #print (math.cos(a))
     q2 = math.acos((x^2 + y^2 - l^2 - m^2)/ (2 * l * m ))
